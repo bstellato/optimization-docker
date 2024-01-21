@@ -22,8 +22,6 @@ docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work optimization-docker
 docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 your-image-name
 ```
 
-TODO: Complete with right home address
-
 
 You will see an output until something similar to
 
