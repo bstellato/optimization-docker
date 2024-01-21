@@ -1,0 +1,10 @@
+cvxopt
+cvxpy
+investpy
+matplotlib
+networkx
+numpy
+pyarrow
+pandas
+scipy
+ipywidgets
