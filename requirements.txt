@@ -1,5 +1,4 @@
-cvxopt
-cvxpy
+cvxpy @ git+https://github.com/cvxpy/cvxpy@0a8881d#egg=cvxpy
 investpy
 matplotlib
 networkx
