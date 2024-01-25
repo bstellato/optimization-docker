@@ -3,6 +3,12 @@
 - ORF307: Optimization (undergraduate)
 - ORF522: Linear and Nonlinear Optimization (graduate)
 
+## Installation
+
+## Install docker
+
+Install docker Desktop from [here](https://docs.docker.com/get-docker/)
+
 ## Pull image from dockerhub
 To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
 ```bash
@@ -19,7 +25,7 @@ docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work optimization-docker
 
 - From the Windows command prompt run
 ```
-docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 your-image-name
+docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 optimization-docker
 ```
 
 
