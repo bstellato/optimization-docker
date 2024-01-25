@@ -5,11 +5,11 @@
 
 ## Installation
 
-## Install docker
+### Install docker
 
 Install docker Desktop from [here](https://docs.docker.com/get-docker/)
 
-## Pull image from dockerhub
+### Pull image from dockerhub
 To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
 ```bash
 docker pull bstellato/optimization-docker:latest
@@ -18,17 +18,20 @@ docker pull bstellato/optimization-docker:latest
 ## Run
 To run this image simply execute the following commands
 
+### Run Docker image
+#### Mac and Linux
 - From the Mac or Linux terminal run:
-```bash
-docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work optimization-docker
-```
+  ```bash
+  docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work optimization-docker
+  ```
 
+#### Windows
 - From the Windows command prompt run
-```
-docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 optimization-docker
-```
+  ```
+  docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 optimization-docker
+  ```
 
-
+### Open browser
 You will see an output until something similar to
 
 >     To access the server, open this file in a browser:
