@@ -17,3 +17,5 @@ RUN pip install --no-cache-dir --requirement /tmp/requirements.txt && \
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
+
+CMD ["start-notebook.py", "--IdentityProvider.token=''"]

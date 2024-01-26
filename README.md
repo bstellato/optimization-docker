@@ -7,7 +7,9 @@
 
 ### Install docker
 
-Install docker Desktop from [here](https://docs.docker.com/get-docker/)
+- Install docker Desktop from [here](https://docs.docker.com/get-docker/)
+- Sign-into Docker Desktop (you can use your github profile)
+
 
 ### Pull image from dockerhub
 To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
@@ -15,34 +17,40 @@ To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimizati
 docker pull bstellato/optimization-docker:latest
 ```
 
-## Run
+## Run Docker image
 To run this image simply execute the following commands
 
-### Run Docker image
-#### Mac and Linux
+### Mac and Linux
 - From the Mac or Linux terminal run:
   ```bash
-  docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work optimization-docker
+  docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work bstellato/optimization-docker
   ```
 
-#### Windows
+### Windows
 - From the Windows command prompt run
   ```
-  docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 optimization-docker
+  docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 bstellato/optimization-docker
   ```
 
+
 ### Open browser
-You will see an output until something similar to
 
->     To access the server, open this file in a browser:
->         file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
->     Or copy and paste one of these URLs:
->         http://feed7340e75f:8888/lab?token=27924055XXXXXX
->         http://127.0.0.1:8888/lab?token=2792XXXXXXXX
+Open the link [http://127.0.0.1:8888/lab](http://127.0.0.1:8888/lab) and you will have the Jupyterlab session running. Remember to shut it down `File -> Shut Down` when you are done.
 
-Copy the last link starting with `http://127...` into your web browser and your are ready to go!
 
-## Build
+## I am getting an error running the image!
+If you are getting an error running the image (e.g., "port is already allocation") you should kill the existing docker containers. You can do it by running `docker ps`.
+
+You will see the docker containers as follows
+
+```
+CONTAINER ID   IMAGE                 COMMAND                  CREATED         STATUS                   PORTS                    NAMES
+db8b31714ae7   optimization-docker   "tini -g -- start.sh…"   3 minutes ago   Up 3 minutes (healthy)   0.0.0.0:8888->8888/tcp   pedantic_haslett
+```
+
+Take the name of the container you would like to close and run, in this case, `docker kill pedantic_haslett`.
+
+## To build the image (not necessary for the class)
 To build the image run 
 ```bash
 docker build --rm --tag optimization-docker .
