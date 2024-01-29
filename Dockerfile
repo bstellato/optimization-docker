@@ -5,15 +5,10 @@ LABEL maintainer="Bartolomeo Stellato <bartolomeo.stellato@gmail.com>"
 # Install C/C++ build + latex packages for correct fonts
 USER root
 RUN apt-get update && \
-    apt-get install -y cm-super dvipng build-essential && \
+    apt-get install -y cm-super dvipng build-essential cmake libopenblas-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Fix pandoc installation (resintall it from conda-forge)
-RUN mamba install --yes -c conda-forge pandoc && \
-    mamba clean --all -f -y && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
 
 # Install from the requirements.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/

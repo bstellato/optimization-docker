@@ -51,5 +51,5 @@ Take the name of the container you would like to close and run, in this case, `d
 ## To build the image (not necessary for the class)
 To build the image run 
 ```bash
-docker build --rm --tag optimization-docker .
+docker build --rm --tag bstellato/optimization-docker .
 ```
