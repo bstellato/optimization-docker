@@ -8,8 +8,6 @@
 ### Install docker
 
 - Install docker Desktop from [here](https://docs.docker.com/get-docker/)
-- Sign-into Docker Desktop (you can use your github profile)
-
 
 ### Pull image from dockerhub
 To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
