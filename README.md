@@ -21,13 +21,13 @@ To run this image simply execute the following commands
 ### Mac and Linux
 - From the Mac or Linux terminal run:
   ```bash
-  docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work bstellato/optimization-docker
+  docker run -it --rm -p 8888:8888 -v $HOME:/home/jovyan/work bstellato/optimization-docker:main
   ```
 
 ### Windows
 - From the Windows command prompt run
   ```
-  docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 bstellato/optimization-docker
+  docker run -v %USERPROFILE%:/home/jovyan/work -p 8888:8888 bstellato/optimization-docker:main
   ```
 
 
