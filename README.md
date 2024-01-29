@@ -12,7 +12,7 @@
 ### Pull image from dockerhub
 To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
 ```bash
-docker pull bstellato/optimization-docker:latest
+docker pull bstellato/optimization-docker:main
 ```
 
 ## Run Docker image
