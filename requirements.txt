@@ -1,5 +1,6 @@
 jax
 cvxpy
+dccp
 investpy
 matplotlib
 networkx
