@@ -1,5 +1,6 @@
 jax
 cvxpy
+pepit
 dccp
 investpy
 matplotlib
