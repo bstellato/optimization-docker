@@ -9,8 +9,33 @@
 
 - Install docker Desktop from [here](https://docs.docker.com/get-docker/)
 
-### Pull image from dockerhub
-To pull the image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker) run
+### Get the startup files
+
+**Option 1: Download individual files (recommended for beginners)**
+
+You only need to download one file based on your operating system:
+
+- **Windows users**: Download [Start-Jupyter-Windows.bat](https://raw.githubusercontent.com/bstellato/optimization-docker/main/Start-Jupyter-Windows.bat) (right-click and select "Save link as...")
+- **Mac users**: Download [start-jupyter-mac.command](https://raw.githubusercontent.com/bstellato/optimization-docker/main/start-jupyter-mac.command) (right-click and select "Save link as...")
+- **Linux users**: Download [start-jupyter-linux.desktop](https://raw.githubusercontent.com/bstellato/optimization-docker/main/start-jupyter-linux.desktop) (right-click and select "Save link as...")
+- **All users**: Download [docker-compose.yml](https://raw.githubusercontent.com/bstellato/optimization-docker/main/docker-compose.yml) and save it in the same folder as your startup file
+
+After downloading, you may need to:
+- **Mac users**: Make the file executable with `chmod +x start-jupyter-mac.command` in Terminal
+- **Linux users**: Make the file executable with `chmod +x start-jupyter-linux.desktop` in Terminal
+
+**Option 2: Clone the repository (for Git users)**
+```bash
+git clone https://github.com/bstellato/optimization-docker.git
+cd optimization-docker
+```
+
+### About the Docker image
+This repository uses a Docker image from [dockerhub](https://hub.docker.com/r/bstellato/optimization-docker).
+
+When using Docker Compose (recommended), the image will be automatically pulled the first time you run it.
+
+If you prefer to use Docker directly, you can manually pull the image with:
 ```bash
 docker pull bstellato/optimization-docker:main
 ```

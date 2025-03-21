@@ -2,7 +2,7 @@
 Type=Application
 Name=Start Jupyter Lab
 Comment=Start Jupyter Lab using Docker Compose
-Exec=bash -c "cd %k && ./start_jupyter_linux.sh"
+Exec=bash -c "cd %k && echo 'Starting Jupyter Lab environment...' && docker compose up -d && sleep 2 && echo -e '\n✅ Jupyter Lab is running!\n📊 Connect at: http://127.0.0.1:8888/lab\n\nTo stop the server when you are done:\ndocker compose down\n' && xdg-open http://127.0.0.1:8888/lab && echo 'You can close this window after you are done using Jupyter Lab.' && read -p 'Press Enter to close this window...'"
 Icon=terminal
 Terminal=true
 Categories=Development;Education;
