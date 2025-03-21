@@ -1,0 +1,19 @@
+services:
+  jupyter:
+    image: bstellato/optimization-docker:main
+    ports:
+      - "8888:8888"
+    volumes:
+      # This works for both Unix-like systems and Windows
+      - ${HOME:-${USERPROFILE:-~}}:/home/jovyan/work
+    command: ["start-notebook.py", "--IdentityProvider.token=''"]
+    # Reduce logging output
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_PLATFORM_STDERR=ERROR
+    # Quiet output in docker compose
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "1"
