@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Start Jupyter Lab
+Comment=Start Jupyter Lab using Docker Compose
+Exec=bash -c "cd %k && ./start_jupyter_linux.sh"
+Icon=terminal
+Terminal=true
+Categories=Development;Education;
+StartupNotify=true

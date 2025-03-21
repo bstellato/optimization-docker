@@ -21,19 +21,33 @@ docker pull bstellato/optimization-docker:main
 The easiest way to run this image is using Docker Compose:
 
 1. Make sure you have Docker Compose installed (it comes with Docker Desktop)
-2. Run one of the following commands:
+2. **Simply double-click** one of these files:
 
-   **On Mac/Linux:**
-   ```bash
-   ./start_jupyter.sh
-   ```
+   **On Mac:**
+   - Double-click the `start-jupyter-mac.command` file
+   - If you get a security warning, go to System Preferences → Security & Privacy and click "Open Anyway"
 
    **On Windows:**
-   ```
-   start_jupyter.bat
+   - Double-click the `Start-Jupyter-Windows.bat` file
+
+   **On Linux:**
+   - Double-click the `start-jupyter-linux.desktop` file
+   - If needed, right-click the file first, select Properties, and check "Allow executing file as program" in the Permissions tab
+   - Some Linux distributions may require you to mark the file as trusted before executing
+
+   **From the command line (alternative):**
+   ```bash
+   # Mac
+   ./start_jupyter_mac.sh
+   
+   # Linux
+   ./start_jupyter_linux_core.sh
+   
+   # Windows
+   start_jupyter_windows.bat
    ```
 
-This will start Jupyter Lab in the background with minimal output and provide you with the connection link.
+This will start Jupyter Lab in the background, open your browser automatically, and provide you with the connection link.
 
 ### Using Docker directly
 
