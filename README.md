@@ -11,14 +11,10 @@
 
 ### Get the startup files
 
-**Option 1: Download individual files (recommended for beginners)**
+**Option 1: Download the ZIP file (recommended for beginners)**
 
-You only need to download one file based on your operating system (right-click on the link and select "Save link as..."):
-
-- **Windows users**: Download [Start-Jupyter-Windows.bat](https://raw.githubusercontent.com/bstellato/optimization-docker/main/Start-Jupyter-Windows.bat)
-- **Mac users**: Download [start-jupyter-mac.command](https://raw.githubusercontent.com/bstellato/optimization-docker/main/start-jupyter-mac.command)
-- **Linux users**: Download [start-jupyter-linux.desktop](https://raw.githubusercontent.com/bstellato/optimization-docker/main/start-jupyter-linux.desktop)
-- **All users**: Download [docker-compose.yml](https://raw.githubusercontent.com/bstellato/optimization-docker/main/docker-compose.yml) and save it in the same folder as your startup file
+1. Download the [ZIP file of this repository](https://github.com/bstellato/optimization-docker/archive/refs/heads/main.zip)
+2. Extract/unzip the downloaded file to a location of your choice
 
 **Option 2: Clone the repository (for Git users)**
 
@@ -33,8 +29,8 @@ cd optimization-docker
 
 The easiest way to run this image is using Docker Compose:
 
-1. Make sure you have Docker Compose installed (it comes with Docker Desktop)
-2. **Simply double-click** one of these files:
+1. Go to folder where you unpacked the startup files
+2. **Double-click** the appropriate file for your operating system:
 
    **On Mac:**
 
@@ -53,19 +49,6 @@ The easiest way to run this image is using Docker Compose:
    - If needed, right-click the file first, select Properties, and check "Allow executing file as program" in the Permissions tab
    - Some Linux distributions may require you to mark the file as trusted before executing
 
-   **From the command line (alternative):**
-
-   ```bash
-   # Mac
-   ./start_jupyter_mac.sh
-
-   # Linux
-   ./start_jupyter_linux_core.sh
-
-   # Windows
-   start_jupyter_windows.bat
-   ```
-
 This will start Jupyter Lab in the background, open your browser automatically, and provide you with the connection link.
 
 ### About the Docker image and using it directly
@@ -79,6 +62,7 @@ If you prefer to use Docker directly:
 #### Mac and Linux
 
 - You can manually pull the image first (optional):
+
   ```bash
   docker pull bstellato/optimization-docker:main
   ```
