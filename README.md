@@ -35,9 +35,7 @@ The easiest way to run this image is using Docker Compose:
    **On Mac:**
 
    - Double-click the `start-jupyter-mac.command` file
-   - When you see the security warning "Apple could not verify...", either:
-     - Right-click the file, select "Open", then click "Open" in the dialog
-     - Or go to System Preferences → Security & Privacy and click "Open Anyway"
+   - When you see the security warning "Apple could not verify...", go to System Preferences → Security & Privacy and click "Open Anyway"
 
    **On Windows:**
 
